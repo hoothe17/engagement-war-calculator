@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Engagement War Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
+      padding: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0;
+    }
+    button {
+      padding: 12px;
+      width: 100%;
+      background: #ff0055;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎮 Weekly Engagement War</h1>
+
+<h2>TikTok Stats</h2>
+<input id="ttLikes" placeholder="Likes">
+<input id="ttComments" placeholder="Comments">
+<input id="ttShares" placeholder="Shares">
+<input id="ttSaves" placeholder="Saves">
+<input id="ttFollowers" placeholder="New Followers">
+
+<h2>Instagram (Optional)</h2>
+<input id="igLikes" placeholder="Likes">
+<input id="igComments" placeholder="Comments">
+<input id="igShares" placeholder="Shares">
+<input id="igFollowers" placeholder="New Followers">
+
+<h2>YouTube (Optional)</h2>
+<input id="ytLikes" placeholder="Likes">
+<input id="ytComments" placeholder="Comments">
+<input id="ytSubs" placeholder="Subscribers Gained">
+
+<button onclick="calculate()">CALCULATE SCORE</button>
+
+<div class="result" id="output"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
