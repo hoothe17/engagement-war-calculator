@@ -5,28 +5,53 @@
   <title>Engagement War Calculator</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #0f0f0f;
       color: white;
       padding: 20px;
+      max-width: 500px;
+      margin: auto;
     }
+    h1 { color: #ff0055; text-align: center; }
+    h2 { border-bottom: 1px solid #333; padding-bottom: 5px; margin-top: 25px; font-size: 1.2rem; }
     input {
       width: 100%;
-      padding: 8px;
-      margin: 6px 0;
+      padding: 10px;
+      margin: 8px 0;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      color: white;
+      border-radius: 4px;
+      box-sizing: border-box;
     }
     button {
-      padding: 12px;
+      padding: 15px;
       width: 100%;
       background: #ff0055;
       color: white;
-      font-size: 16px;
+      font-size: 18px;
+      font-weight: bold;
       border: none;
       cursor: pointer;
-    }
-    .result {
       margin-top: 20px;
-      font-size: 18px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+    button:hover { background: #cc0044; }
+    .result {
+      margin-top: 30px;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .commentary {
+      display: block;
+      margin-top: 15px;
+      font-style: italic;
+      color: #ff0055;
+      font-size: 1.1rem;
     }
   </style>
 </head>
@@ -34,27 +59,32 @@
 
 <h1>🎮 Weekly Engagement War</h1>
 
-<h2>TikTok Stats</h2>
-<input id="ttLikes" placeholder="Likes">
-<input id="ttComments" placeholder="Comments">
-<input id="ttShares" placeholder="Shares">
-<input id="ttSaves" placeholder="Saves">
-<input id="ttFollowers" placeholder="New Followers">
+<h2>TikTok Stats (Primary)</h2>
+<input type="number" id="ttViews" placeholder="Views (0.5 pts)">
+<input type="number" id="ttLikes" placeholder="Likes (1 pt)">
+<input type="number" id="ttComments" placeholder="Comments (3 pts)">
+<input type="number" id="ttShares" placeholder="Shares (5 pts)">
+<input type="number" id="ttSaves" placeholder="Saves (4 pts)">
+<input type="number" id="ttFollowers" placeholder="New Followers (10 pts)">
 
-<h2>Instagram (Optional)</h2>
-<input id="igLikes" placeholder="Likes">
-<input id="igComments" placeholder="Comments">
-<input id="igShares" placeholder="Shares">
-<input id="igFollowers" placeholder="New Followers">
+<h2>Instagram Bonus</h2>
+<input type="number" id="igViews" placeholder="Views (0.25 pts)">
+<input type="number" id="igLikes" placeholder="Likes (0.5 pts)">
+<input type="number" id="igComments" placeholder="Comments (2 pts)">
+<input type="number" id="igShares" placeholder="Shares (3 pts)">
+<input type="number" id="igFollowers" placeholder="New Followers (5 pts)">
 
-<h2>YouTube (Optional)</h2>
-<input id="ytLikes" placeholder="Likes">
-<input id="ytComments" placeholder="Comments">
-<input id="ytSubs" placeholder="Subscribers Gained">
+<h2>YouTube Bonus</h2>
+<input type="number" id="ytViews" placeholder="Views (0.25 pts)">
+<input type="number" id="ytLikes" placeholder="Likes (1 pt)">
+<input type="number" id="ytComments" placeholder="Comments (3 pts)">
+<input type="number" id="ytSubs" placeholder="Subscribers Gained (10 pts)">
 
 <button onclick="calculate()">CALCULATE SCORE</button>
 
-<div class="result" id="output"></div>
+<div class="result" id="output">
+    Enter your stats to see if you're dropping mid or going viral.
+</div>
 
 <script src="script.js"></script>
 </body>
